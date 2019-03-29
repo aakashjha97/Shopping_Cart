@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">.
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scaled=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script type = "text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+	<style>
+		#body{
+			margin:0px;
+			padding: 0px;
+			font-size: sans-serif;
+			background-color:;
+		}
+		.form{
+			width: 400px;
+			padding: 40px;
+			position: absolute;
+			top:54%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			background: #191919;
+			text-align: center;
+			border-radius: 10px;
+		}
+		.form h1{
+			color: white;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+
+		.form input[type="text"],.form input[type="password"] {
+			border:0;
+			background: none;
+			display: black;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 14px 10px;
+			width: 250px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition:  0.25s;
+		}
+
+		.form input[type="submit"]{
+			border:0;
+			background: none;
+			display: black;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 14px 10px;
+			width: 250px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition:  0.25s;
+		}
+		#nav{
+			margin-top: -20px;
+		}
+		#h{
+			color: chocolate;
+		}
+	</style>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="script.js"></script>
+</head>
+<body id="body">
+	<form class="form" method="POST" action="/login">
+		<h1>login</h1>
+		<input type="text" placeholder="username" name="username" autocomplete="off">
+		<input type="password" placeholder="password" name="password" autocomplete="off">
+		<input type="submit" placeholder="Login" name="Login">
+	</form>
+</body>
+</html>
